@@ -48,29 +48,23 @@ export default function SelectedWorks() {
         </motion.div>
       )}
 
-      {/* Section Header with Text Mask Reveal */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-        <div>
-          <div className="flex items-center gap-2 font-mono text-xs text-neutral-500 uppercase tracking-widest mb-3">
-            <Layers className="w-3.5 h-3.5 text-white" />
-            <span>[ 01 // SELECTED WORKS INDEX ]</span>
-          </div>
-          <div className="overflow-hidden">
-            <motion.h2
-              initial={{ y: 40, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-3xl sm:text-5xl font-extrabold uppercase tracking-tighter text-white"
-            >
-              ARCHITECTURAL <span className="text-neutral-500">PROJECTS.</span>
-            </motion.h2>
-          </div>
+      {/* Section Header */}
+      <div className="mb-16">
+        <div className="flex items-center gap-2 font-mono text-xs text-neutral-500 uppercase tracking-widest mb-3">
+          <Layers className="w-3.5 h-3.5 text-white" />
+          <span>[ 01 // SELECTED WORKS INDEX ]</span>
         </div>
-
-        <p className="text-xs font-mono text-neutral-500 max-w-xs uppercase">
-          HOVER OVER ROWS TO PREVIEW ENGINE SPECS & FLOATING MEDIA. CLICK FOR FULL ARCHITECTURE.
-        </p>
+        <div className="overflow-hidden">
+          <motion.h2
+            initial={{ y: 40, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl sm:text-5xl font-extrabold uppercase tracking-tighter text-white"
+          >
+            ARCHITECTURAL <span className="text-neutral-500">PROJECTS.</span>
+          </motion.h2>
+        </div>
       </div>
 
       {/* Interactive Project List Table */}

@@ -1,26 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Cpu, Terminal, Layers } from 'lucide-react';
+import { Cpu } from 'lucide-react';
 import { skillGroups } from '../data/skills';
 
 export default function SkillsMatrix() {
   return (
     <section id="skills" className="relative py-28 max-w-7xl mx-auto px-6 border-b border-neutral-900">
       {/* Section Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-        <div>
-          <div className="flex items-center gap-2 font-mono text-xs text-neutral-500 uppercase tracking-widest mb-3">
-            <Cpu className="w-3.5 h-3.5 text-white" />
-            <span>[ 02 // TECHNICAL MATRIX ]</span>
-          </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold uppercase tracking-tighter text-white">
-            THE STACK <span className="text-neutral-500">ENGINE.</span>
-          </h2>
+      <div className="mb-16">
+        <div className="flex items-center gap-2 font-mono text-xs text-neutral-500 uppercase tracking-widest mb-3">
+          <Cpu className="w-3.5 h-3.5 text-white" />
+          <span>[ 02 // TECHNICAL MATRIX ]</span>
         </div>
-
-        <p className="text-xs font-mono text-neutral-500 max-w-xs uppercase">
-          HOVER OVER SKILL BADGES TO FLIP COLOR INVERSION FROM DARK CHARCOAL TO SOLID WHITE.
-        </p>
+        <h2 className="text-3xl sm:text-5xl font-extrabold uppercase tracking-tighter text-white">
+          THE STACK <span className="text-neutral-500">ENGINE.</span>
+        </h2>
       </div>
 
       {/* 2-Column Grid Layout */}
