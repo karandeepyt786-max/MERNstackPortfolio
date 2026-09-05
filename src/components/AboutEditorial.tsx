@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Terminal, GraduationCap, Briefcase, Code2, Eye, CheckCircle2 } from 'lucide-react';
+import { Terminal, Code2, CheckCircle2 } from 'lucide-react';
 
 export default function AboutEditorial() {
   const [viewMode, setViewMode] = useState<'code' | 'visual'>('code');
@@ -55,20 +55,14 @@ export const handleOrderCheckout = async (req: Request, res: Response) => {
   return (
     <section id="about" className="relative py-28 max-w-7xl mx-auto px-6 border-b border-neutral-900">
       {/* Section Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-        <div>
-          <div className="flex items-center gap-2 font-mono text-xs text-neutral-500 uppercase tracking-widest mb-3">
-            <Terminal className="w-3.5 h-3.5 text-white" />
-            <span>[ 03 // STORY & PHILOSOPHY ]</span>
-          </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold uppercase tracking-tighter text-white">
-            THE LOGIC & <span className="text-neutral-500">THE CODE.</span>
-          </h2>
+      <div className="mb-16">
+        <div className="flex items-center gap-2 font-mono text-xs text-neutral-500 uppercase tracking-widest mb-3">
+          <Terminal className="w-3.5 h-3.5 text-white" />
+          <span>[ 03 // STORY & PHILOSOPHY ]</span>
         </div>
-
-        <p className="text-xs font-mono text-neutral-500 max-w-xs uppercase">
-          BRIDGING COMPUTER SCIENCE ACADEMICS WITH MODERN FULL-STACK PRODUCTION CODE.
-        </p>
+        <h2 className="text-3xl sm:text-5xl font-extrabold uppercase tracking-tighter text-white">
+          THE LOGIC & <span className="text-neutral-500">THE CODE.</span>
+        </h2>
       </div>
 
       <div className="grid lg:grid-cols-12 gap-12 items-start">
