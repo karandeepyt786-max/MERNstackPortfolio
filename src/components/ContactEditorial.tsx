@@ -44,10 +44,10 @@ export default function ContactEditorial() {
           // DIRECT DISPATCH EMAIL
         </span>
         <a
-          href="mailto:karandeepyt786@gmail.com"
+          href="mailto:karandeepsingh.careers@gmail.com "
           className="hover-underline-expand text-2xl sm:text-5xl lg:text-6xl font-extrabold font-mono tracking-tighter text-white uppercase inline-block interactive-hover"
         >
-          karandeepyt786@gmail.com
+          karandeepsingh.careers@gmail.com 
         </a>
       </div>
 
@@ -73,8 +73,8 @@ export default function ContactEditorial() {
 
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-white" />
-                <a href="mailto:karandeepyt786@gmail.com" className="hover:text-white transition-colors">
-                  EMAIL: karandeepyt786@gmail.com
+                <a href="mailto:karandeepsingh.careers@gmail.com " className="hover:text-white transition-colors">
+                  EMAIL: karandeepsingh.careers@gmail.com 
                 </a>
               </div>
             </div>
@@ -182,7 +182,7 @@ export default function ContactEditorial() {
           </a>
 
           <a
-            href="mailto:karandeepyt786@gmail.com"
+            href="mailto:karandeepsingh.careers@gmail.com "
             className="hover:text-white transition-colors flex items-center gap-1 interactive-hover"
           >
             <span>EMAIL</span>

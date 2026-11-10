@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, useSpring } from 'framer-motion';
 import { ArrowUpRight, Layers } from 'lucide-react';
 import { projects, Project } from '../data/projects';
-import LayeredProjectModal from './LayeredProjectModal';
+import LayeredProjectModal from './LayeredProjectModal';   
 
 export default function SelectedWorks() {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
@@ -24,7 +24,7 @@ export default function SelectedWorks() {
     <section
       id="works"
       onMouseMove={handleMouseMove}
-      className="relative py-28 max-w-7xl mx-auto px-6 border-b border-neutral-900 overflow-hidden"
+      className="relative px-6 mx-auto overflow-hidden border-b py-28 max-w-7xl border-neutral-900"
     >
       {/* Floating Image Preview Card Following Cursor */}
       {activeProject && (
@@ -38,7 +38,7 @@ export default function SelectedWorks() {
           <img
             src={activeProject.image}
             alt={activeProject.title}
-            className="w-full h-full object-cover"
+            className="object-cover w-full h-full"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
           <div className="absolute bottom-2 left-3 right-3 font-mono text-[10px] text-white flex items-center justify-between">
@@ -50,7 +50,7 @@ export default function SelectedWorks() {
 
       {/* Section Header */}
       <div className="mb-16">
-        <div className="flex items-center gap-2 font-mono text-xs text-neutral-500 uppercase tracking-widest mb-3">
+        <div className="flex items-center gap-2 mb-3 font-mono text-xs tracking-widest uppercase text-neutral-500">
           <Layers className="w-3.5 h-3.5 text-white" />
           <span>[ 01 // SELECTED WORKS INDEX ]</span>
         </div>
@@ -60,7 +60,7 @@ export default function SelectedWorks() {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-3xl sm:text-5xl font-extrabold uppercase tracking-tighter text-white"
+            className="text-3xl font-extrabold tracking-tighter text-white uppercase sm:text-5xl"
           >
             ARCHITECTURAL <span className="text-neutral-500">PROJECTS.</span>
           </motion.h2>
@@ -85,7 +85,7 @@ export default function SelectedWorks() {
             >
               {/* Left Index & Title */}
               <div className="flex items-center gap-6 sm:gap-10">
-                <span className="font-mono text-xs sm:text-sm text-neutral-500 font-bold">
+                <span className="font-mono text-xs font-bold sm:text-sm text-neutral-500">
                   [{project.index}]
                 </span>
 
@@ -99,8 +99,8 @@ export default function SelectedWorks() {
               </div>
 
               {/* Center/Right: Stack Tags & Year */}
-              <div className="flex items-center gap-6 sm:gap-10 justify-between md:justify-end">
-                <div className="hidden sm:flex flex-wrap gap-2">
+              <div className="flex items-center justify-between gap-6 sm:gap-10 md:justify-end">
+                <div className="flex-wrap hidden gap-2 sm:flex">
                   {project.tags.slice(0, 4).map((tag) => (
                     <span
                       key={tag}
@@ -115,7 +115,7 @@ export default function SelectedWorks() {
                   ))}
                 </div>
 
-                <span className="font-mono text-xs text-neutral-500 font-bold">{project.year}</span>
+                <span className="font-mono text-xs font-bold text-neutral-500">{project.year}</span>
 
                 <div
                   className={`w-8 h-8 rounded-full border flex items-center justify-center transition-all ${

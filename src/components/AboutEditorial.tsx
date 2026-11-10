@@ -13,7 +13,7 @@ export default function AboutEditorial() {
       description: 'Building end-to-end web applications with React, Node.js, Express, and MongoDB. Integrating secure JWT authentication, OAuth 2.0 PKCE, and payment gateways with automated webhooks.',
     },
     {
-      year: '2021 - 2024',
+      year: '2022 - 2025',
       title: 'BACHELOR OF COMPUTER APPLICATIONS (BCA)',
       subtitle: 'Computer Science & Software Systems Foundation',
       description: 'Solid academic foundation in Data Structures, Algorithms, Relational Database Management Systems (RDBMS), Operating Systems, and Object-Oriented Programming principles.',
@@ -53,22 +53,22 @@ export const handleOrderCheckout = async (req: Request, res: Response) => {
 };`;
 
   return (
-    <section id="about" className="relative py-28 max-w-7xl mx-auto px-6 border-b border-neutral-900">
+    <section id="about" className="relative px-6 mx-auto border-b py-28 max-w-7xl border-neutral-900">
       {/* Section Header */}
       <div className="mb-16">
-        <div className="flex items-center gap-2 font-mono text-xs text-neutral-500 uppercase tracking-widest mb-3">
+        <div className="flex items-center gap-2 mb-3 font-mono text-xs tracking-widest uppercase text-neutral-500">
           <Terminal className="w-3.5 h-3.5 text-white" />
           <span>[ 03 // STORY & PHILOSOPHY ]</span>
         </div>
-        <h2 className="text-3xl sm:text-5xl font-extrabold uppercase tracking-tighter text-white">
+        <h2 className="text-3xl font-extrabold tracking-tighter text-white uppercase sm:text-5xl">
           THE LOGIC & <span className="text-neutral-500">THE CODE.</span>
         </h2>
       </div>
 
-      <div className="grid lg:grid-cols-12 gap-12 items-start">
+      <div className="grid items-start gap-12 lg:grid-cols-12">
         {/* Left: Timeline (7 Cols) */}
-        <div className="lg:col-span-7 space-y-8">
-          <div className="border-l border-neutral-800 ml-4 space-y-10 pl-6">
+        <div className="space-y-8 lg:col-span-7">
+          <div className="pl-6 ml-4 space-y-10 border-l border-neutral-800">
             {timelineEvents.map((item, idx) => (
               <motion.div
                 key={item.title}
@@ -81,15 +81,15 @@ export const handleOrderCheckout = async (req: Request, res: Response) => {
                 {/* Dot */}
                 <div className="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-black border-2 border-white group-hover:bg-white transition-colors" />
 
-                <div className="p-6 rounded-lg bg-black border border-neutral-900 space-y-2">
+                <div className="p-6 space-y-2 bg-black border rounded-lg border-neutral-900">
                   <div className="flex items-center justify-between font-mono text-xs text-neutral-500">
-                    <span className="text-white font-bold">{item.year}</span>
+                    <span className="font-bold text-white">{item.year}</span>
                     <span>[ ENTRY 0{idx + 1} ]</span>
                   </div>
 
-                  <h3 className="text-lg font-bold uppercase tracking-tight text-white">{item.title}</h3>
-                  <div className="text-xs font-mono text-neutral-400">{item.subtitle}</div>
-                  <p className="text-xs text-neutral-400 leading-relaxed font-normal pt-2">
+                  <h3 className="text-lg font-bold tracking-tight text-white uppercase">{item.title}</h3>
+                  <div className="font-mono text-xs text-neutral-400">{item.subtitle}</div>
+                  <p className="pt-2 text-xs font-normal leading-relaxed text-neutral-400">
                     {item.description}
                   </p>
                 </div>
@@ -100,14 +100,14 @@ export const handleOrderCheckout = async (req: Request, res: Response) => {
 
         {/* Right: Code Snippet vs Visual Result (5 Cols) */}
         <div className="lg:col-span-5">
-          <div className="sticky top-28 p-6 rounded-lg bg-black border border-neutral-900 space-y-6">
-            <div className="flex items-center justify-between border-b border-neutral-900 pb-4">
-              <span className="font-mono text-xs text-neutral-500 uppercase flex items-center gap-2">
+          <div className="sticky p-6 space-y-6 bg-black border rounded-lg top-28 border-neutral-900">
+            <div className="flex items-center justify-between pb-4 border-b border-neutral-900">
+              <span className="flex items-center gap-2 font-mono text-xs uppercase text-neutral-500">
                 <Code2 className="w-4 h-4 text-white" />
                 <span>EXPRESS CONTROLLER</span>
               </span>
 
-              <div className="flex items-center gap-1 p-1 bg-neutral-950 border border-neutral-800 rounded font-mono text-xs">
+              <div className="flex items-center gap-1 p-1 font-mono text-xs border rounded bg-neutral-950 border-neutral-800">
                 <button
                   onClick={() => setViewMode('code')}
                   className={`px-2.5 py-1 rounded transition-all ${
@@ -144,10 +144,10 @@ export const handleOrderCheckout = async (req: Request, res: Response) => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  className="p-6 rounded bg-neutral-950 border border-neutral-900 text-center space-y-4 font-mono text-xs"
+                  className="p-6 space-y-4 font-mono text-xs text-center border rounded bg-neutral-950 border-neutral-900"
                 >
-                  <CheckCircle2 className="w-8 h-8 text-white mx-auto" />
-                  <div className="text-white font-bold uppercase">ORDER DISPATCH COMMITTED</div>
+                  <CheckCircle2 className="w-8 h-8 mx-auto text-white" />
+                  <div className="font-bold text-white uppercase">ORDER DISPATCH COMMITTED</div>
                   <div className="text-neutral-400 text-[11px]">
                     MongoDB document created in 38ms. Payment token verified via Razorpay SDK.
                   </div>
